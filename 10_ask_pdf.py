@@ -143,7 +143,7 @@ def ask(qa, query):
 
 
 def page_ask_my_pdf():
-    st.title("Ask My PDF(s)")
+    st.title("Ask My PDF(s) 🤗")
 
     llm = select_model()
     container = st.container()
