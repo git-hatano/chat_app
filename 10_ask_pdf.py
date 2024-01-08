@@ -67,8 +67,10 @@ def load_qdrant():
     # 以前こう書いていたところ: client = QdrantClient(path=QDRANT_PATH)
     # url, api_key は Qdrant Cloud から取得する
     client = QdrantClient(
-        url=os.environment['QDRANT_CLOUD_ENDPOINT'],
-        api_key=os.environment['QDRANT_CLOUD_API_KEY']
+        # url=os.environment['QDRANT_CLOUD_ENDPOINT'],
+        # api_key=os.environment['QDRANT_CLOUD_API_KEY']
+        url=os.environ['QDRANT_CLOUD_ENDPOINT'],
+        api_key=os.environ['QDRANT_CLOUD_API_KEY']
     )
 
     # すべてのコレクション名を取得
